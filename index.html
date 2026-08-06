@@ -146,7 +146,7 @@ else if(/звони|позвони/.test(t)){const p=PEOPLE.find(p=>norm(text).i
 else h='Спросите про Д49, задачи, штат или «посчитай …».';
 $('abody').innerHTML+='<div class="bub me">'+text+'</div><div class="bub th">'+h+'<div class="trace">⛓ '+steps.join(' → ')+' · аудит</div></div>';$('abody').scrollTop=1e9;}
 function aSend(){const v=$('ainp').value.trim();if(!v)return;$('ainp').value='';ai(v);}
-$('asend').onclick=aSend;$('ainp').addEventListener('keydown',e=>{if(e.key==='Enter')aSend();};
+$('asend').onclick=aSend;$('ainp').addEventListener('keydown',e=>{if(e.key==='Enter')aSend();});
 function aiThink(){if(!aiAuto||!USER)return;const r=['Вибрация Т-12 в норме.','Смена Б +4% к плану.','МеталлТрейд задержка 2 дн — претензия?'];const x=r[Math.floor(rnd(0,3))];log('ИИ (автономно)','Инсайт',x,'READ');banner('🧠 ИИ',x,'🧠');}
 setInterval(aiThink,45000);
 function showAuth(){$('auth').classList.add('on');}
